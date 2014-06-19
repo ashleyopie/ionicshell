@@ -1,0 +1,29 @@
+/* Empty. Add your own CSS if you like */
+.blue, .yellow, .pink{
+	width: 100%;
+	height: 50%;
+	background-color: red;
+}
+
+a.item {
+	background: #000;
+	color:white;
+
+}
+
+.pane {background: #000;}
+
+.card {
+	margin: 0;
+	padding:0;
+	box-shadow: none;
+	border: none;
+}
+.bar.bar-dark{
+	border-color:#000;
+	background-color: #000;
+}
+
+.bar .title {
+	background-image: url(img/indystarlogo.png);;
+}
