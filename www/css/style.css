@@ -24,6 +24,28 @@ a.item {
 	background-color: #000;
 }
 
-.bar .title {
-	background-image: url(img/indystarlogo.png);;
+
+
+.title-image {
+    margin-top: 8px;
+    height: 27px;
 }
+.item.activated {
+	color:#000;
+}
+.bar.bar-positive {
+	background-color:#000;
+}
+.item-complex .item-content, .item-radio .item-content {
+position: relative;
+z-index: 2;
+padding: 15px 45px 15px 15px;
+border: none;
+background-color: black; 
+color:#fff !important;
+}
+a.item-complex, a.item-content {
+	color:#fff !important;
+}
+
+h2 {color:#fff;}

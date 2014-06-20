@@ -11,7 +11,15 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('HomeCtrl', function($scope) {})
+// A simple controller that fetches a list of data from a service
+.controller('BeerIndexCtrl', function($scope, BeerService) {
+  // "Pets" is a service returning mock data (services.js)
+  $scope.beers = BeerService.all();
+})
 
 
-.controller('AccountCtrl', function($scope) {});
+// A simple controller that shows a tapped item's data
+.controller('BeerDetailCtrl', function($scope, $stateParams, BeerService) {
+  // "Pets" is a service returning mock data (services.js)
+  $scope.beer = BeerService.get($stateParams.beerId);
+});

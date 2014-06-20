@@ -1,0 +1,29 @@
+<!-- 
+  This template gets placed in the Beer tab's <ion-nav-view> directive.
+  It was wired up in the app config (app.js) 
+ 
+-->
+<ion-view title='<img class="title-image" src="img/indystarlogo.png" />'>
+  <ion-content>
+<div class="list card">
+
+
+
+  <div class="item item-image">
+    <img src="img/card.png">
+  </div>
+
+  
+
+</div>
+    <ion-list>
+
+      <ion-item ng-repeat="beer in beers" type="item-text-wrap" href="#/tab/beer/{{beer.id}}">
+        <h2>{{beer.title}}</h2>
+        <p>{{beer.description}}</p>
+      </ion-item>
+      
+    </ion-list>
+
+  </ion-content>
+</ion-view>

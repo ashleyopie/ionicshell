@@ -44,29 +44,49 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
      * @param {string} name The name of the person to greet
      */
 
-    .state('tab.dash', {
-        url: '/dash',
-        views: {
-            'tab-dash': {
-                templateUrl: 'templates/tab-dash.html',
-                controller: 'HomeCtrl'
-            }
+     .state('tab.beer-index', {
+      url: '/beers',
+      views: {
+        'beers-tab': {
+          templateUrl: 'templates/beer-index.html',
+          controller: 'BeerIndexCtrl'
         }
+      }
     })
 
-
-
-    .state('tab.account', {
-        url: '/account',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/tab-account.html',
-                controller: 'AccountCtrl'
-            }
+    .state('tab.beer-detail', {
+      url: '/beer/:beerId',
+      views: {
+        'beers-tab': {
+          templateUrl: 'templates/beer-detail.html',
+          controller: 'BeerDetailCtrl'
         }
+      }
+    })
+
+    .state('tab.adopt', {
+      url: '/adopt',
+      views: {
+        'adopt-tab': {
+          templateUrl: 'templates/adopt.html'
+        }
+      }
+    })
+
+    .state('tab.about', {
+      url: '/about',
+      views: {
+        'about-tab': {
+          templateUrl: 'templates/about.html'
+        }
+      }
     });
 
-    // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/tab/dash');
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/tab/beers');
 
-});
+})
+
+
+;
+
